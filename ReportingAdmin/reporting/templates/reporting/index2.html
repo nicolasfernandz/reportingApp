@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Reporting {% endblock %}
+{% block head %}<meta charset="utf-8">{% endblock %}
+{% load staticfiles %}
+
+
+{% block content %}
+	
+{% csrf_token %}
+<body>
+	<button type="button">Click Me!</button>
+	
+	<div>
+    	<form action="getReporting/" method="post">
+		{% csrf_token %}
+			<div>
+				<label for="observaciones" class="text-semibold">Observaciones</label>
+                <input type="text" id="observaciones" name="observaciones" placeholder="Observaciones, comentarios">
+			</div>
+    		<div>
+        		<button type="submit">GET</button>
+			</div>
+        	<div>
+        		<button type="submit">CANCELAR</button>
+        	</div>
+        </form>
+	</div>
+	
+	
+</body>
+{% endblock %}
+
+{% block footer %}
+<footer class="footerManualStle">
+</footer>
+{% endblock %}
