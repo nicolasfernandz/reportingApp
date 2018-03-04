@@ -100,3 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 ReportingAdmin/ReportingAdmin/settings.py
+
+#Nuestros Dinnpro
+*.pyc
+processed_thumbnail_files
+temporary_uploads
+*/migrations/*
