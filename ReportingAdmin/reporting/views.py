@@ -22,6 +22,9 @@ def logout(request):
 def login(request):
     return HttpResponseRedirect("/login/")
 
+def login_success(request):
+    return redirect("/reporting/index.html")
+
 def getRegistration(request):
     return render(request, 'registration/registration.html')
 
